@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Razor Pages with Entity Framework Core", "Razor Pages with Entity Framework Core\Razor Pages with Entity Framework Core.csproj", "{832F79B7-325B-4B4B-B365-259548962B03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{832F79B7-325B-4B4B-B365-259548962B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{832F79B7-325B-4B4B-B365-259548962B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{832F79B7-325B-4B4B-B365-259548962B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{832F79B7-325B-4B4B-B365-259548962B03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A80E4B8C-AE28-4E3B-9EB8-2A66F535B94C}
+	EndGlobalSection
+EndGlobal
