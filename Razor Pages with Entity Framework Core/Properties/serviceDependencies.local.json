@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql.local",
+      "connectionId": "Razor_Pages_with_Entity_Framework_CoreContext"
+    }
+  }
+}

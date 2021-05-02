@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
@@ -8,6 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Razor_Pages_with_Entity_Framework_Core.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Razor_Pages_with_Entity_Framework_Core
 {
@@ -23,7 +26,17 @@ namespace Razor_Pages_with_Entity_Framework_Core
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            int MyMaxModelBindingCollectionSize = Convert.ToInt32(
+                Configuration["MyMaxModelBindingCollectionSize"] ?? "100");
+
+            services.Configure<MvcOptions>(options =>
+                   options.MaxModelBindingCollectionSize = MyMaxModelBindingCollectionSize);
+
             services.AddRazorPages();
+
+            services.AddDbContext<SchoolContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Razor_Pages_with_Entity_Framework_CoreContext")));
+            services.AddDatabaseDeveloperPageExceptionFilter();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
